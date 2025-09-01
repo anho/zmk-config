@@ -74,6 +74,15 @@
             hold-trigger-key-positions = <7 8 9 10 11 12 13 21 22 23 24 25 26 27 34 35 36 37 38 39 43 44 45>;
             flavor = "tap-preferred";
         };
+
+        semi_colon: semi_colon {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SEMI_COLON";
+            bindings = <&kp COMMA>, <&kp SEMI>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     keymap {
@@ -91,7 +100,7 @@
             bindings = <
 &kp ESCAPE  &kp Q                          &kp W                      &kp E                      &kp R                              &long_press RG(T) T  &none  &none  &kp Y    &kp U                                &kp I                        &kp O                        &kp P     &none
 &kp TAB     &home_row_left LEFT_CONTROL A  &home_row_left LEFT_ALT S  &home_row_left LEFT_GUI D  &home_row_shift_left LEFT_SHIFT F  &kp G                &none  &none  &kp H    &home_row_shift_right RIGHT_SHIFT J  &home_row_right RIGHT_GUI K  &home_row_right RIGHT_ALT L  &kp SEMI  &kp SQT
-&none       &kp Z                          &kp X                      &long_press LG(C) C        &long_press LG(V) V                &kp B                              &kp N    &kp M                                &kp COMMA                    &kp DOT                      &kp FSLH  &none
+&none       &kp Z                          &kp X                      &long_press LG(C) C        &long_press LG(V) V                &kp B                              &kp N    &kp M                                &semi_colon                  &kp DOT                      &kp FSLH  &none
                                                                       &kp LGUI                   &lt 1 BACKSPACE                    &kp SPACE                          &kp RET  &mo 2                                &kp RALT
             >;
 
