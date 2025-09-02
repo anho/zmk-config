@@ -169,10 +169,10 @@
             //                    | GUI |     | SPC   |        | ENT   |     | ALT |
 
             bindings = <
-&trans  &kp N1  &kp N2        &kp N3        &kp N4          &kp N5  &trans  &trans  &kp N6                                        &kp N7                                &kp N8                              &kp N9          &kp N0  &trans
-&trans  &none   &kp LEFT_ALT  &kp LEFT_GUI  &kp LEFT_SHIFT  &none   &trans  &trans  &home_row_shift_right RIGHT_SHIFT LEFT_ARROW  &home_row_right RIGHT_GUI DOWN_ARROW  &home_row_right RIGHT_ALT UP_ARROW  &kp RIGHT       &trans  &trans
-&trans  &none   &none         &none         &none           &none                   &bracket_pointy                               &bracket_round                        &bracket_square                     &bracket_curly  &trans  &trans
-                              &trans        &trans          &trans                  &trans                                        &trans                                &trans
+&trans  &kp N1  &kp N2        &kp N3        &kp N4          &kp N5  &trans  &trans  &kp N6           &kp N7                                        &kp N8                              &kp N9                                 &kp N0  &trans
+&trans  &none   &kp LEFT_ALT  &kp LEFT_GUI  &kp LEFT_SHIFT  &none   &trans  &trans  &kp LEFT_ARROW   &home_row_shift_right RIGHT_SHIFT DOWN_ARROW  &home_row_right RIGHT_GUI UP_ARROW  &home_row_right RIGHT_ALT RIGHT_ARROW  &trans  &trans
+&trans  &none   &none         &none         &none           &none                   &bracket_pointy  &bracket_round                                &bracket_square                     &bracket_curly                         &trans  &trans
+                              &trans        &trans          &trans                  &trans           &trans                                        &trans
             >;
         };
 
