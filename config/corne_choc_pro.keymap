@@ -83,6 +83,24 @@
             #binding-cells = <0>;
             mods = <(MOD_LSFT)>;
         };
+
+        colon: colon {
+            compatible = "zmk,behavior-mod-morph";
+            label = "COLON";
+            bindings = <&kp PERIOD>, <&kp COLON>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
+
+        question_mark: question_mark {
+            compatible = "zmk,behavior-mod-morph";
+            label = "QUESTION_MARK";
+            bindings = <&kp QUESTION>, <&kp EXCLAMATION>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     keymap {
@@ -98,9 +116,9 @@
             //                    | GUI | LWR | SPC |               | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESCAPE  &kp Q                          &kp W                      &kp E                      &kp R                              &long_press RG(T) T  &none  &none  &kp Y    &kp U                                &kp I                        &kp O                        &kp P     &none
-&kp TAB     &home_row_left LEFT_CONTROL A  &home_row_left LEFT_ALT S  &home_row_left LEFT_GUI D  &home_row_shift_left LEFT_SHIFT F  &kp G                &none  &none  &kp H    &home_row_shift_right RIGHT_SHIFT J  &home_row_right RIGHT_GUI K  &home_row_right RIGHT_ALT L  &kp SEMI  &kp SQT
-&none       &kp Z                          &kp X                      &long_press LG(C) C        &long_press LG(V) V                &kp B                              &kp N    &kp M                                &semi_colon                  &kp DOT                      &kp FSLH  &none
+&kp ESCAPE  &kp Q                          &kp W                      &kp E                      &kp R                              &long_press RG(T) T  &none  &none  &kp Y    &kp U                                &kp I                        &kp O                        &kp P             &none
+&kp TAB     &home_row_left LEFT_CONTROL A  &home_row_left LEFT_ALT S  &home_row_left LEFT_GUI D  &home_row_shift_left LEFT_SHIFT F  &kp G                &none  &none  &kp H    &home_row_shift_right RIGHT_SHIFT J  &home_row_right RIGHT_GUI K  &home_row_right RIGHT_ALT L  &kp SINGLE_QUOTE  &kp SLASH
+&none       &kp Z                          &kp X                      &long_press LG(C) C        &long_press LG(V) V                &kp B                              &kp N    &kp M                                &semi_colon                  &colon                       &question_mark    &none
                                                                       &kp LGUI                   &lt 1 BACKSPACE                    &kp SPACE                          &kp RET  &mo 2                                &kp RALT
             >;
 
@@ -117,10 +135,10 @@
             //                    | GUI |     | SPC   |        | ENT   |     | ALT |
 
             bindings = <
-&kp TAB    &kp N1        &kp N2           &kp N3        &kp N4        &kp N5          &kp LCTRL  &kp RCTRL  &kp N6    &kp N7    &kp N8     &kp N9     &kp N0  &kp BSPC
-&kp LCTRL  &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LALT   &kp RALT   &kp LEFT  &kp DOWN  &kp UP     &kp RIGHT  &trans  &trans
-&kp LSHFT  &bt BT_CLR    &rgb_ug RGB_TOG  &sys_reset    &bootloader   &studio_unlock                        &trans    &trans    &trans     &trans     &trans  &trans
-                                          &kp LGUI      &trans        &kp SPACE                             &kp LGUI  &trans    &kp SPACE
+&trans  &kp N1        &kp N2           &kp N3        &kp N4        &kp N5          &kp LCTRL  &kp RCTRL  &kp N6    &kp N7    &kp N8     &kp N9     &kp N0  &kp BSPC
+&trans  &bt BT_SEL 0  &bt BT_SEL 1     &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4    &kp LALT   &kp RALT   &kp LEFT  &kp DOWN  &kp UP     &kp RIGHT  &trans  &trans
+&trans  &bt BT_CLR    &rgb_ug RGB_TOG  &sys_reset    &bootloader   &studio_unlock                        &trans    &trans    &trans     &trans     &trans  &trans
+                                       &kp LGUI      &trans        &kp SPACE                             &kp LGUI  &trans    &kp SPACE
             >;
         };
 
