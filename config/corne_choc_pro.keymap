@@ -158,8 +158,8 @@
     keymap {
         compatible = "zmk,keymap";
 
-        Qwerty {
-            display-name = "qwerty";
+        letters {
+            display-name = "abc";
 
             // --------------------------------------------------------------------------------
             // |  TAB |  Q  |  W  |  E  |  R  |  T  |  MUTE |  PP   |  Y  |  U   |  I  |  O  |  P  | BSPC |
@@ -168,17 +168,17 @@
             //                    | GUI | LWR | SPC |               | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESCAPE  &kp Q                          &kp W                      &kp E                      &kp R                              &long_press RG(T) T  &none  &none  &kp Y      &kp U                                &kp I                        &kp O                        &kp P                                       &kp BACKSLASH
-&kp TAB     &home_row_left LEFT_CONTROL A  &home_row_left LEFT_ALT S  &home_row_left LEFT_GUI D  &home_row_shift_left LEFT_SHIFT F  &kp G                &none  &none  &kp H      &home_row_shift_right RIGHT_SHIFT J  &home_row_right RIGHT_GUI K  &home_row_right RIGHT_ALT L  &home_row_right RIGHT_CONTROL SINGLE_QUOTE  &plus_equal
-&none       &kp Z                          &kp X                      &long_press LG(C) C        &long_press LG(V) V                &kp B                              &kp N      &kp M                                &dot_and_colon               &comma_and_semi_colon        &kp MINUS                                   &exclamation_and_question_mark
+&kp ESCAPE  &kp Q                          &kp W                      &kp E                      &kp R                              &long_press RG(T) T  &none  &none  &kp Y      &kp U                                &kp I                        &kp O                        &kp P                                &none
+&kp TAB     &home_row_left LEFT_CONTROL A  &home_row_left LEFT_ALT S  &home_row_left LEFT_GUI D  &home_row_shift_left LEFT_SHIFT F  &kp G                &none  &none  &kp H      &home_row_shift_right RIGHT_SHIFT J  &home_row_right RIGHT_GUI K  &home_row_right RIGHT_ALT L  &home_row_right RIGHT_CONTROL MINUS  &plus_equal
+&none       &kp Z                          &kp X                      &long_press LG(C) C        &long_press LG(V) V                &kp B                              &kp N      &kp M                                &dot_and_colon               &comma_and_semi_colon        &kp SINGLE_QUOTE                     &exclamation_and_question_mark
                                                                       &mo 3                      &lt 1 BACKSPACE                    &kp SPACE                          &kp ENTER  &lt 2 DELETE                         &mo 3
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_UP PG_DN &inc_dec_kp C_PREV C_NEXT &inc_dec_kp C_BRI_DN C_BRI_UP>;
         };
 
-        numbers+symbols {
-            display-name = "num/sym";
+        numbers {
+            display-name = "123!";
 
             // -----------------------------------------------------------------------------------------
             // |  TAB |  1  |  2  |  3  |  4  |  5    |  LCTRL | RCTRL |  6  |  7  |  8  |  9  |  0  | BSPC |
@@ -187,15 +187,15 @@
             //                    | GUI |     | SPC   |        | ENT   |     | ALT |
 
             bindings = <
-&kp GRAVE  &kp N1  &kp N2        &kp N3        &kp N4          &kp N5  &trans  &trans  &kp N6           &kp N7                                &kp N8                          &kp N9                                 &kp N0         &kp DOT
-&trans     &none   &kp LEFT_ALT  &kp LEFT_GUI  &kp LEFT_SHIFT  &none   &trans  &trans  &kp LEFT_ARROW   &home_row_shift_right RIGHT_SHIFT UP  &home_row_right RIGHT_GUI DOWN  &home_row_right RIGHT_ALT RIGHT_ARROW  &kp PAGE_UP    &kp HOME
-&trans     &none   &none         &none         &none           &none                   &bracket_pointy  &bracket_round                        &bracket_square                 &bracket_curly                         &kp PAGE_DOWN  &kp END
-                                 &trans        &trans          &trans                  &trans           &trans                                &trans
+&kp GRAVE  &kp N1  &kp N2        &kp N3                            &kp N4                                     &kp N5    &trans  &trans  &kp N6           &kp N7                                &kp N8                          &kp N9                                 &kp N0         &kp DOT
+&trans     &none   &kp LEFT_ALT  &home_row_left LEFT_GUI KP_SLASH  &home_row_shift_left LEFT_SHIFT BACKSLASH  &kp PIPE  &trans  &trans  &kp LEFT_ARROW   &home_row_shift_right RIGHT_SHIFT UP  &home_row_right RIGHT_GUI DOWN  &home_row_right RIGHT_ALT RIGHT_ARROW  &kp PAGE_UP    &kp HOME
+&trans     &none   &none         &none                             &none                                      &none                     &bracket_pointy  &bracket_round                        &bracket_square                 &bracket_curly                         &kp PAGE_DOWN  &kp END
+                                 &trans                            &trans                                     &trans                    &trans           &trans                                &trans
             >;
         };
 
-        fns {
-            display-name = "fns";
+        Functions {
+            display-name = "func";
 
             // -----------------------------------------------------------------------------------------
             // |  TAB |  !  |  @  |  #  |  $  |  %  | LCTRL | RCTRL |  ^  |  &  |  *  |  (  |  )  | BSPC |
@@ -204,10 +204,10 @@
             //                    | GUI |     | SPC |               | ENT |     | ALT |
 
             bindings = <
-&kp LS(LC(LG(NUMBER_4)))  &none         &none         &none         &none         &none       &trans  &trans  &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &trans
-&trans                    &kp C_PAUSE   &kp C_PLAY    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE  &trans  &trans  &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &trans
-&trans                    &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans        &bt BT_CLR                  &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &trans
-                                                      &kp LGUI      &trans        &kp SPACE                   &kp RET    &trans     &kp RALT
+&kp LS(LC(LG(NUMBER_4)))  &kp F1       &kp F2      &kp F3        &kp F4        &kp F5      &none  &none  &kp F6  &kp F7  &kp F8      &kp F9  &kp F10  &bt BT_SEL 0
+&none                     &kp C_PAUSE  &kp C_PLAY  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_MUTE  &none  &none  &none   &none   &none       &none   &none    &bt BT_SEL 1
+&none                     &none        &none       &none         &none         &none                     &none   &none   &none       &none   &none    &bt BT_SEL 2
+                                                   &trans        &trans        &trans                    &trans  &trans  &bt BT_CLR
             >;
         };
 
