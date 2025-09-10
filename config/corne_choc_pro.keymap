@@ -214,10 +214,10 @@
         german {
             display-name = "german";
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans       &trans           &trans           &trans           &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp DE_EURO  &kp DE_A_UMLAUT  &kp DE_O_UMLAUT  &kp DE_U_UMLAUT  &kp DE_SZ  &trans
-&trans  &trans  &trans  &trans  &trans  &trans                  &trans       &trans           &trans           &trans           &trans     &trans
-                        &trans  &trans  &trans                  &trans       &trans           &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans     &trans     &trans     &trans     &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LC(N5)  &kp LC(Q)  &kp LC(P)  &kp LC(Y)  &kp LC(S)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans     &trans     &trans     &trans     &trans
+                        &trans  &trans  &trans                  &trans      &trans     &trans
             >;
         };
 
