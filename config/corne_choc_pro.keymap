@@ -10,7 +10,7 @@
 #include "zmk-helpers/helper.h"
 #include "zmk-helpers/key-labels/42.h"
 #include "zmk-helpers/unicode-chars/german.dtsi"
-#include "keys_altgr_dead_letters.h"
+#include "keys_de.h"
 
 / {
     chosen { zmk,physical-layout = &default_layout; };
