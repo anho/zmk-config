@@ -215,7 +215,7 @@
             display-name = "german";
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans      &trans     &trans     &trans     &trans     &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LC(N5)  &kp LC(Q)  &kp LC(P)  &kp LC(Y)  &kp LC(S)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &kp LA(N5)  &kp LA(Q)  &kp LA(P)  &kp LA(Y)  &kp LA(S)  &trans
 &trans  &trans  &trans  &trans  &trans  &trans                  &trans      &trans     &trans     &trans     &trans     &trans
                         &trans  &trans  &trans                  &trans      &trans     &trans
             >;
