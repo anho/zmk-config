@@ -199,6 +199,8 @@
             label = "TD_C_COPY";
             #binding-cells = <0>;
             bindings = <&kp C>, <&kp LG(C)>;
+
+            tapping-term-ms = <150>;
         };
 
         td_v_paste: td_v_paste {
@@ -206,6 +208,8 @@
             label = "TD_V_PASTE";
             #binding-cells = <0>;
             bindings = <&kp V>, <&kp LG(V)>;
+
+            tapping-term-ms = <150>;
         };
     };
 
