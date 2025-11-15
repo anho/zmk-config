@@ -184,6 +184,15 @@
             #binding-cells = <0>;
             bindings = <&none>, <&kp LC(LG(Q))>;
         };
+
+        quote_and_underscore: quote_and_underscore {
+            compatible = "zmk,behavior-mod-morph";
+            label = "QUOTE_AND_UNDERSCORE";
+            bindings = <&kp SINGLE_QUOTE>, <&kp UNDERSCORE>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT)>;
+        };
     };
 
     macros {
@@ -209,9 +218,9 @@
             //                    | GUI | LWR | SPC |               | ENT | RSE  | ALT |
 
             bindings = <
-&kp ESCAPE      &kp Q                    &kp W                &kp E                &kp R                  &long_press RG(T) T  &none  &none  &kp Y      &kp U                    &kp I                  &kp O                  &kp P                          &td_lock
-&kp TAB         &hm_left LEFT_CONTROL A  &hm_left LEFT_ALT S  &hm_left LEFT_GUI D  &hm_left LEFT_SHIFT F  &kp G                &none  &none  &kp H      &hm_right RIGHT_SHIFT J  &hm_right RIGHT_GUI K  &hm_right RIGHT_ALT L  &hm_right RIGHT_CONTROL MINUS  &plus_equal
-&kp LEFT_SHIFT  &kp Z                    &kp X                &long_press LG(C) C  &long_press LG(V) V    &kp B                              &kp N      &kp M                    &dot_and_colon         &comma_and_semi_colon  &kp SINGLE_QUOTE               &exclamation_and_question_mark
+&kp ESCAPE      &kp B                    &kp L                &kp D                &kp W                  &long_press RG(T) Z  &none  &none  &kp MINUS  &kp F                    &kp O                  &kp U                  &kp J                      &td_lock
+&kp TAB         &hm_left LEFT_CONTROL N  &hm_left LEFT_ALT R  &hm_left LEFT_GUI T  &hm_left LEFT_SHIFT S  &kp G                &none  &none  &kp Y      &hm_right RIGHT_SHIFT H  &hm_right RIGHT_GUI A  &hm_right RIGHT_ALT E  &hm_right RIGHT_CONTROL I  &plus_equal
+&kp LEFT_SHIFT  &kp Q                    &kp X                &long_press LG(C) M  &long_press LG(V) C    &kp V                              &kp K      &kp P                    &dot_and_colon         &comma_and_semi_colon  &kp SINGLE_QUOTE           &exclamation_and_question_mark
                                                               &mo 3                &lt 1 BACKSPACE        &kp SPACE                          &kp ENTER  &lt 2 DELETE             &mo 3
             >;
 
