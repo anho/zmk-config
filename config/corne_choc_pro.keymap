@@ -12,6 +12,10 @@
 #include "zmk-helpers/unicode-chars/german.dtsi"
 #include "keys_de.h"
 
+// Shortcuts
+#define HYPER LC(LS(LA(LGUI)))
+
+
 / {
     chosen { zmk,physical-layout = &default_layout; };
 };
